@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA6A3F922B06902F0090604C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A3F912B06902F0090604C /* AppCoordinator.swift */; };
 		DABD43A32B064FB90006C7FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43A22B064FB90006C7FC /* AppDelegate.swift */; };
-		DABD43A52B064FB90006C7FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43A42B064FB90006C7FC /* SceneDelegate.swift */; };
-		DABD43A72B064FB90006C7FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43A62B064FB90006C7FC /* ViewController.swift */; };
-		DABD43AA2B064FB90006C7FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABD43A82B064FB90006C7FC /* Main.storyboard */; };
+		DABD43A72B064FB90006C7FC /* OnHelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43A62B064FB90006C7FC /* OnHelloViewController.swift */; };
+		DABD43AA2B064FB90006C7FC /* OnWelcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABD43A82B064FB90006C7FC /* OnWelcome.storyboard */; };
 		DABD43AD2B064FB90006C7FC /* SuperBall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DABD43AB2B064FB90006C7FC /* SuperBall.xcdatamodeld */; };
 		DABD43AF2B064FBA0006C7FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DABD43AE2B064FBA0006C7FC /* Assets.xcassets */; };
 		DABD43B22B064FBA0006C7FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABD43B02B064FBA0006C7FC /* LaunchScreen.storyboard */; };
 		DABD43BD2B064FBA0006C7FC /* SuperBallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43BC2B064FBA0006C7FC /* SuperBallTests.swift */; };
 		DABD43C72B064FBA0006C7FC /* SuperBallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43C62B064FBA0006C7FC /* SuperBallUITests.swift */; };
 		DABD43C92B064FBA0006C7FC /* SuperBallUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43C82B064FBA0006C7FC /* SuperBallUITestsLaunchTests.swift */; };
+		DABD43E62B0651FC0006C7FC /* OnHelloViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43E52B0651FC0006C7FC /* OnHelloViewPresenter.swift */; };
+		DABD43ED2B0657CD0006C7FC /* OnHelloCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43EC2B0657CD0006C7FC /* OnHelloCoordinator.swift */; };
+		DABD43F22B0658F80006C7FC /* OnTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43F12B0658F80006C7FC /* OnTutorialViewController.swift */; };
+		DABD43F42B06592E0006C7FC /* OnTurorialViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43F32B06592E0006C7FC /* OnTurorialViewPresenter.swift */; };
+		DABD43F62B0659450006C7FC /* OnTutorialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43F52B0659450006C7FC /* OnTutorialCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA6A3F912B06902F0090604C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DABD439F2B064FB90006C7FC /* SuperBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD43A22B064FB90006C7FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DABD43A42B064FB90006C7FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DABD43A62B064FB90006C7FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DABD43A92B064FB90006C7FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DABD43A62B064FB90006C7FC /* OnHelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnHelloViewController.swift; sourceTree = "<group>"; };
+		DABD43A92B064FB90006C7FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OnWelcome.storyboard; sourceTree = "<group>"; };
 		DABD43AC2B064FB90006C7FC /* SuperBall.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SuperBall.xcdatamodel; sourceTree = "<group>"; };
 		DABD43AE2B064FBA0006C7FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DABD43B12B064FBA0006C7FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +56,11 @@
 		DABD43C22B064FBA0006C7FC /* SuperBallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperBallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD43C62B064FBA0006C7FC /* SuperBallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperBallUITests.swift; sourceTree = "<group>"; };
 		DABD43C82B064FBA0006C7FC /* SuperBallUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperBallUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DABD43E52B0651FC0006C7FC /* OnHelloViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnHelloViewPresenter.swift; sourceTree = "<group>"; };
+		DABD43EC2B0657CD0006C7FC /* OnHelloCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnHelloCoordinator.swift; sourceTree = "<group>"; };
+		DABD43F12B0658F80006C7FC /* OnTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTutorialViewController.swift; sourceTree = "<group>"; };
+		DABD43F32B06592E0006C7FC /* OnTurorialViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTurorialViewPresenter.swift; sourceTree = "<group>"; };
+		DABD43F52B0659450006C7FC /* OnTutorialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTutorialCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +111,8 @@
 		DABD43A12B064FB90006C7FC /* SuperBall */ = {
 			isa = PBXGroup;
 			children = (
-				DABD43A22B064FB90006C7FC /* AppDelegate.swift */,
-				DABD43A42B064FB90006C7FC /* SceneDelegate.swift */,
-				DABD43A62B064FB90006C7FC /* ViewController.swift */,
-				DABD43A82B064FB90006C7FC /* Main.storyboard */,
-				DABD43AE2B064FBA0006C7FC /* Assets.xcassets */,
-				DABD43B02B064FBA0006C7FC /* LaunchScreen.storyboard */,
-				DABD43B32B064FBA0006C7FC /* Info.plist */,
+				DABD43D52B0650980006C7FC /* SysApp */,
+				DABD43D92B06512A0006C7FC /* SysModules */,
 				DABD43AB2B064FB90006C7FC /* SuperBall.xcdatamodeld */,
 			);
 			path = SuperBall;
@@ -128,6 +133,176 @@
 				DABD43C82B064FBA0006C7FC /* SuperBallUITestsLaunchTests.swift */,
 			);
 			path = SuperBallUITests;
+			sourceTree = "<group>";
+		};
+		DABD43D52B0650980006C7FC /* SysApp */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43D72B0651090006C7FC /* SysResources */,
+				DABD43D62B0650A60006C7FC /* SysConfig */,
+				DABD43B02B064FBA0006C7FC /* LaunchScreen.storyboard */,
+				DABD43A22B064FB90006C7FC /* AppDelegate.swift */,
+				DA6A3F912B06902F0090604C /* AppCoordinator.swift */,
+			);
+			path = SysApp;
+			sourceTree = "<group>";
+		};
+		DABD43D62B0650A60006C7FC /* SysConfig */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43B32B064FBA0006C7FC /* Info.plist */,
+			);
+			path = SysConfig;
+			sourceTree = "<group>";
+		};
+		DABD43D72B0651090006C7FC /* SysResources */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43D82B0651100006C7FC /* SysAssets */,
+			);
+			path = SysResources;
+			sourceTree = "<group>";
+		};
+		DABD43D82B0651100006C7FC /* SysAssets */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43AE2B064FBA0006C7FC /* Assets.xcassets */,
+			);
+			path = SysAssets;
+			sourceTree = "<group>";
+		};
+		DABD43D92B06512A0006C7FC /* SysModules */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43DA2B0651320006C7FC /* OnWelcome */,
+				DABD43DB2B06514F0006C7FC /* OnGame */,
+				DABD43DC2B0651540006C7FC /* OnPreferences */,
+			);
+			path = SysModules;
+			sourceTree = "<group>";
+		};
+		DABD43DA2B0651320006C7FC /* OnWelcome */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43E22B0651C10006C7FC /* Storyboard */,
+				DABD43DD2B06515D0006C7FC /* OnHello */,
+				DABD43DE2B0651700006C7FC /* OnTutorial */,
+			);
+			path = OnWelcome;
+			sourceTree = "<group>";
+		};
+		DABD43DB2B06514F0006C7FC /* OnGame */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43DF2B06517B0006C7FC /* OnPreGame */,
+				DABD43E02B0651830006C7FC /* OnPlayGame */,
+			);
+			path = OnGame;
+			sourceTree = "<group>";
+		};
+		DABD43DC2B0651540006C7FC /* OnPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43E12B06518B0006C7FC /* OnSettings */,
+			);
+			path = OnPreferences;
+			sourceTree = "<group>";
+		};
+		DABD43DD2B06515D0006C7FC /* OnHello */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43E32B0651CC0006C7FC /* ViewController */,
+				DABD43E42B0651D20006C7FC /* ViewPresenter */,
+				DABD43EB2B0657B50006C7FC /* Coordinator */,
+			);
+			path = OnHello;
+			sourceTree = "<group>";
+		};
+		DABD43DE2B0651700006C7FC /* OnTutorial */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43EE2B0658DF0006C7FC /* ViewController */,
+				DABD43EF2B0658E40006C7FC /* ViewPresenter */,
+				DABD43F02B0658EC0006C7FC /* Coordinator */,
+			);
+			path = OnTutorial;
+			sourceTree = "<group>";
+		};
+		DABD43DF2B06517B0006C7FC /* OnPreGame */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OnPreGame;
+			sourceTree = "<group>";
+		};
+		DABD43E02B0651830006C7FC /* OnPlayGame */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OnPlayGame;
+			sourceTree = "<group>";
+		};
+		DABD43E12B06518B0006C7FC /* OnSettings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OnSettings;
+			sourceTree = "<group>";
+		};
+		DABD43E22B0651C10006C7FC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43A82B064FB90006C7FC /* OnWelcome.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DABD43E32B0651CC0006C7FC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43A62B064FB90006C7FC /* OnHelloViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DABD43E42B0651D20006C7FC /* ViewPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43E52B0651FC0006C7FC /* OnHelloViewPresenter.swift */,
+			);
+			path = ViewPresenter;
+			sourceTree = "<group>";
+		};
+		DABD43EB2B0657B50006C7FC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43EC2B0657CD0006C7FC /* OnHelloCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DABD43EE2B0658DF0006C7FC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43F12B0658F80006C7FC /* OnTutorialViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DABD43EF2B0658E40006C7FC /* ViewPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43F32B06592E0006C7FC /* OnTurorialViewPresenter.swift */,
+			);
+			path = ViewPresenter;
+			sourceTree = "<group>";
+		};
+		DABD43F02B0658EC0006C7FC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DABD43F52B0659450006C7FC /* OnTutorialCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +411,7 @@
 			files = (
 				DABD43B22B064FBA0006C7FC /* LaunchScreen.storyboard in Resources */,
 				DABD43AF2B064FBA0006C7FC /* Assets.xcassets in Resources */,
-				DABD43AA2B064FB90006C7FC /* Main.storyboard in Resources */,
+				DABD43AA2B064FB90006C7FC /* OnWelcome.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +436,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DABD43F42B06592E0006C7FC /* OnTurorialViewPresenter.swift in Sources */,
+				DABD43ED2B0657CD0006C7FC /* OnHelloCoordinator.swift in Sources */,
 				DABD43AD2B064FB90006C7FC /* SuperBall.xcdatamodeld in Sources */,
-				DABD43A72B064FB90006C7FC /* ViewController.swift in Sources */,
+				DABD43F62B0659450006C7FC /* OnTutorialCoordinator.swift in Sources */,
+				DABD43A72B064FB90006C7FC /* OnHelloViewController.swift in Sources */,
+				DABD43F22B0658F80006C7FC /* OnTutorialViewController.swift in Sources */,
+				DA6A3F922B06902F0090604C /* AppCoordinator.swift in Sources */,
 				DABD43A32B064FB90006C7FC /* AppDelegate.swift in Sources */,
-				DABD43A52B064FB90006C7FC /* SceneDelegate.swift in Sources */,
+				DABD43E62B0651FC0006C7FC /* OnHelloViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,12 +481,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DABD43A82B064FB90006C7FC /* Main.storyboard */ = {
+		DABD43A82B064FB90006C7FC /* OnWelcome.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DABD43A92B064FB90006C7FC /* Base */,
 			);
-			name = Main.storyboard;
+			name = OnWelcome.storyboard;
 			sourceTree = "<group>";
 		};
 		DABD43B02B064FBA0006C7FC /* LaunchScreen.storyboard */ = {
@@ -447,10 +627,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SuperBall/Info.plist;
+				INFOPLIST_FILE = SuperBall/SysApp/SysConfig/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = OnWelcome;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -474,10 +654,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SuperBall/Info.plist;
+				INFOPLIST_FILE = SuperBall/SysApp/SysConfig/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = OnWelcome;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
