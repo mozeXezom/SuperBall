@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		DA6A3F922B06902F0090604C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A3F912B06902F0090604C /* AppCoordinator.swift */; };
+		DA6A3F972B06A9B40090604C /* OnSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A3F962B06A9B40090604C /* OnSettingsCoordinator.swift */; };
+		DA6A3F992B06A9CE0090604C /* OnSettingsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A3F982B06A9CE0090604C /* OnSettingsViewPresenter.swift */; };
+		DA6A3F9B2B06A9FE0090604C /* OnSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A3F9A2B06A9FE0090604C /* OnSettingsViewController.swift */; };
+		DA6A3F9E2B06AA180090604C /* OnSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6A3F9D2B06AA180090604C /* OnSettings.storyboard */; };
 		DABD43A32B064FB90006C7FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43A22B064FB90006C7FC /* AppDelegate.swift */; };
 		DABD43A72B064FB90006C7FC /* OnHelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43A62B064FB90006C7FC /* OnHelloViewController.swift */; };
 		DABD43AA2B064FB90006C7FC /* OnWelcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABD43A82B064FB90006C7FC /* OnWelcome.storyboard */; };
@@ -22,6 +26,15 @@
 		DABD43F22B0658F80006C7FC /* OnTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43F12B0658F80006C7FC /* OnTutorialViewController.swift */; };
 		DABD43F42B06592E0006C7FC /* OnTurorialViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43F32B06592E0006C7FC /* OnTurorialViewPresenter.swift */; };
 		DABD43F62B0659450006C7FC /* OnTutorialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43F52B0659450006C7FC /* OnTutorialCoordinator.swift */; };
+		DAC916472B0775AE00BAA8AD /* OnPlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC916462B0775AE00BAA8AD /* OnPlayGameViewController.swift */; };
+		DAC9164A2B07769800BAA8AD /* OnGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC916492B07769800BAA8AD /* OnGame.storyboard */; };
+		DAC9164D2B07785800BAA8AD /* OnGameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9164C2B07785800BAA8AD /* OnGameService.swift */; };
+		DAC9164F2B07789C00BAA8AD /* OnPlayGameViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC9164E2B07789C00BAA8AD /* OnPlayGameViewPresenter.swift */; };
+		DACF14152B0D3C81005F25BB /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DACF14122B0D3C80005F25BB /* SFProDisplay-Regular.ttf */; };
+		DACF14162B0D3C81005F25BB /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DACF14132B0D3C80005F25BB /* SFProDisplay-Bold.ttf */; };
+		DACF14172B0D3C81005F25BB /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DACF14142B0D3C80005F25BB /* SFProDisplay-Semibold.ttf */; };
+		DACF14192B0D42F7005F25BB /* AppAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACF14182B0D42F7005F25BB /* AppAudioPlayer.swift */; };
+		DACF141C2B0D435F005F25BB /* superballsong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DACF141B2B0D435F005F25BB /* superballsong.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +56,10 @@
 
 /* Begin PBXFileReference section */
 		DA6A3F912B06902F0090604C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DA6A3F962B06A9B40090604C /* OnSettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSettingsCoordinator.swift; sourceTree = "<group>"; };
+		DA6A3F982B06A9CE0090604C /* OnSettingsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSettingsViewPresenter.swift; sourceTree = "<group>"; };
+		DA6A3F9A2B06A9FE0090604C /* OnSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSettingsViewController.swift; sourceTree = "<group>"; };
+		DA6A3F9D2B06AA180090604C /* OnSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnSettings.storyboard; sourceTree = "<group>"; };
 		DABD439F2B064FB90006C7FC /* SuperBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD43A22B064FB90006C7FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DABD43A62B064FB90006C7FC /* OnHelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnHelloViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +78,15 @@
 		DABD43F12B0658F80006C7FC /* OnTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTutorialViewController.swift; sourceTree = "<group>"; };
 		DABD43F32B06592E0006C7FC /* OnTurorialViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTurorialViewPresenter.swift; sourceTree = "<group>"; };
 		DABD43F52B0659450006C7FC /* OnTutorialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTutorialCoordinator.swift; sourceTree = "<group>"; };
+		DAC916462B0775AE00BAA8AD /* OnPlayGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnPlayGameViewController.swift; sourceTree = "<group>"; };
+		DAC916492B07769800BAA8AD /* OnGame.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnGame.storyboard; sourceTree = "<group>"; };
+		DAC9164C2B07785800BAA8AD /* OnGameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnGameService.swift; sourceTree = "<group>"; };
+		DAC9164E2B07789C00BAA8AD /* OnPlayGameViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnPlayGameViewPresenter.swift; sourceTree = "<group>"; };
+		DACF14122B0D3C80005F25BB /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		DACF14132B0D3C80005F25BB /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		DACF14142B0D3C80005F25BB /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		DACF14182B0D42F7005F25BB /* AppAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAudioPlayer.swift; sourceTree = "<group>"; };
+		DACF141B2B0D435F005F25BB /* superballsong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = superballsong.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +114,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA6A3F932B06A9990090604C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DA6A3F962B06A9B40090604C /* OnSettingsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DA6A3F942B06A9A10090604C /* ViewPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				DA6A3F982B06A9CE0090604C /* OnSettingsViewPresenter.swift */,
+			);
+			path = ViewPresenter;
+			sourceTree = "<group>";
+		};
+		DA6A3F952B06A9A60090604C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA6A3F9A2B06A9FE0090604C /* OnSettingsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DA6A3F9C2B06AA090090604C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DA6A3F9D2B06AA180090604C /* OnSettings.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		DABD43962B064FB90006C7FC = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +201,7 @@
 				DABD43B02B064FBA0006C7FC /* LaunchScreen.storyboard */,
 				DABD43A22B064FB90006C7FC /* AppDelegate.swift */,
 				DA6A3F912B06902F0090604C /* AppCoordinator.swift */,
+				DACF14182B0D42F7005F25BB /* AppAudioPlayer.swift */,
 			);
 			path = SysApp;
 			sourceTree = "<group>";
@@ -166,6 +225,8 @@
 		DABD43D82B0651100006C7FC /* SysAssets */ = {
 			isa = PBXGroup;
 			children = (
+				DACF141A2B0D4358005F25BB /* SysSong */,
+				DACF14112B0D3C5F005F25BB /* SysFont */,
 				DABD43AE2B064FBA0006C7FC /* Assets.xcassets */,
 			);
 			path = SysAssets;
@@ -194,6 +255,8 @@
 		DABD43DB2B06514F0006C7FC /* OnGame */ = {
 			isa = PBXGroup;
 			children = (
+				DAC9164B2B07784D00BAA8AD /* Service */,
+				DAC916482B07768D00BAA8AD /* Storyboard */,
 				DABD43DF2B06517B0006C7FC /* OnPreGame */,
 				DABD43E02B0651830006C7FC /* OnPlayGame */,
 			);
@@ -238,6 +301,9 @@
 		DABD43E02B0651830006C7FC /* OnPlayGame */ = {
 			isa = PBXGroup;
 			children = (
+				DAC916452B07759900BAA8AD /* ViewController */,
+				DAC916442B07759100BAA8AD /* ViewPresenter */,
+				DAC916432B07758B00BAA8AD /* Coordinator */,
 			);
 			path = OnPlayGame;
 			sourceTree = "<group>";
@@ -245,6 +311,10 @@
 		DABD43E12B06518B0006C7FC /* OnSettings */ = {
 			isa = PBXGroup;
 			children = (
+				DA6A3F9C2B06AA090090604C /* Storyboard */,
+				DA6A3F952B06A9A60090604C /* ViewController */,
+				DA6A3F942B06A9A10090604C /* ViewPresenter */,
+				DA6A3F932B06A9990090604C /* Coordinator */,
 			);
 			path = OnSettings;
 			sourceTree = "<group>";
@@ -303,6 +373,63 @@
 				DABD43F52B0659450006C7FC /* OnTutorialCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DAC916432B07758B00BAA8AD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DAC916442B07759100BAA8AD /* ViewPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				DAC9164E2B07789C00BAA8AD /* OnPlayGameViewPresenter.swift */,
+			);
+			path = ViewPresenter;
+			sourceTree = "<group>";
+		};
+		DAC916452B07759900BAA8AD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DAC916462B0775AE00BAA8AD /* OnPlayGameViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DAC916482B07768D00BAA8AD /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DAC916492B07769800BAA8AD /* OnGame.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DAC9164B2B07784D00BAA8AD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DAC9164C2B07785800BAA8AD /* OnGameService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DACF14112B0D3C5F005F25BB /* SysFont */ = {
+			isa = PBXGroup;
+			children = (
+				DACF14132B0D3C80005F25BB /* SFProDisplay-Bold.ttf */,
+				DACF14122B0D3C80005F25BB /* SFProDisplay-Regular.ttf */,
+				DACF14142B0D3C80005F25BB /* SFProDisplay-Semibold.ttf */,
+			);
+			path = SysFont;
+			sourceTree = "<group>";
+		};
+		DACF141A2B0D4358005F25BB /* SysSong */ = {
+			isa = PBXGroup;
+			children = (
+				DACF141B2B0D435F005F25BB /* superballsong.mp3 */,
+			);
+			path = SysSong;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,8 +537,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DABD43B22B064FBA0006C7FC /* LaunchScreen.storyboard in Resources */,
+				DACF14172B0D3C81005F25BB /* SFProDisplay-Semibold.ttf in Resources */,
 				DABD43AF2B064FBA0006C7FC /* Assets.xcassets in Resources */,
+				DA6A3F9E2B06AA180090604C /* OnSettings.storyboard in Resources */,
+				DACF14152B0D3C81005F25BB /* SFProDisplay-Regular.ttf in Resources */,
+				DACF141C2B0D435F005F25BB /* superballsong.mp3 in Resources */,
+				DACF14162B0D3C81005F25BB /* SFProDisplay-Bold.ttf in Resources */,
 				DABD43AA2B064FB90006C7FC /* OnWelcome.storyboard in Resources */,
+				DAC9164A2B07769800BAA8AD /* OnGame.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,15 +569,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC916472B0775AE00BAA8AD /* OnPlayGameViewController.swift in Sources */,
 				DABD43F42B06592E0006C7FC /* OnTurorialViewPresenter.swift in Sources */,
 				DABD43ED2B0657CD0006C7FC /* OnHelloCoordinator.swift in Sources */,
+				DAC9164F2B07789C00BAA8AD /* OnPlayGameViewPresenter.swift in Sources */,
+				DA6A3F972B06A9B40090604C /* OnSettingsCoordinator.swift in Sources */,
 				DABD43AD2B064FB90006C7FC /* SuperBall.xcdatamodeld in Sources */,
 				DABD43F62B0659450006C7FC /* OnTutorialCoordinator.swift in Sources */,
 				DABD43A72B064FB90006C7FC /* OnHelloViewController.swift in Sources */,
+				DA6A3F9B2B06A9FE0090604C /* OnSettingsViewController.swift in Sources */,
+				DAC9164D2B07785800BAA8AD /* OnGameService.swift in Sources */,
 				DABD43F22B0658F80006C7FC /* OnTutorialViewController.swift in Sources */,
 				DA6A3F922B06902F0090604C /* AppCoordinator.swift in Sources */,
+				DA6A3F992B06A9CE0090604C /* OnSettingsViewPresenter.swift in Sources */,
 				DABD43A32B064FB90006C7FC /* AppDelegate.swift in Sources */,
 				DABD43E62B0651FC0006C7FC /* OnHelloViewPresenter.swift in Sources */,
+				DACF14192B0D42F7005F25BB /* AppAudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

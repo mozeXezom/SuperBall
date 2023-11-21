@@ -20,6 +20,7 @@ class OnTutorialViewController: UIViewController {
     @IBOutlet weak var threeTutButton: UIButton!
     
     private let viewPresenter: OnTurorialViewPresenter = OnTurorialViewPresenter()
+    private let coordinator: OnTutorialCoordinator = OnTutorialCoordinator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,14 @@ class OnTutorialViewController: UIViewController {
         threeTutButton.isHidden = true
     }
     
+    @IBAction func onShareInsert(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func onSettingsInsert(_ sender: UIButton) {
+        coordinator.makeCoordinationWithOnSettingsController(selfController: self)
+    }
+    
     @IBAction func onPlayInsert(_ sender: UIButton) {
         oneTutButton.isHidden = false
         onTutorialLogoImgView.isHidden = true
@@ -61,6 +70,6 @@ class OnTutorialViewController: UIViewController {
     }
     
     @IBAction func threeInsert(_ sender: UIButton) {
-        
+        coordinator.makeCoordinationWithOnPlayGameController(selfController: self)
     }
 }

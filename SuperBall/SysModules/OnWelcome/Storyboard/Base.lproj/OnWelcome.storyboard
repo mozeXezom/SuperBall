@@ -64,6 +64,9 @@
                                     <constraint firstAttribute="height" constant="40" id="yLW-V6-18O"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="onShareInsert:" destination="I2s-9h-Pit" eventType="touchUpInside" id="aqi-OK-xmk"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M2s-GW-eIV">
                                 <rect key="frame" x="46.666666666666657" y="179" width="300" height="220"/>
@@ -90,6 +93,9 @@
                                     <constraint firstAttribute="width" constant="40" id="jxp-4k-6eW"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="onSettingsInsert:" destination="I2s-9h-Pit" eventType="touchUpInside" id="F3M-7F-NPU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyd-iu-EGH">
                                 <rect key="frame" x="31.666666666666657" y="139" width="330" height="500"/>
