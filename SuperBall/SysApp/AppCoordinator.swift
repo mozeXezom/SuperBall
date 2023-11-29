@@ -53,7 +53,7 @@ final class AppCoordinator {
         if animated {
             let transition = CATransition()
             transition.duration = duration
-            transition.type = .push
+            transition.type = .fade
             transition.subtype = (direction == .fromLeft) ? .fromLeft : .fromRight
 
             selfController.view.window?.layer.add(transition, forKey: kCATransition)

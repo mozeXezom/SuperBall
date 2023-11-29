@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0AC7712B17B5E100938DE5 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = DA0AC7702B17B5E100938DE5 /* AppsFlyerLib */; };
+		DA0AC7742B17B9E900938DE5 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = DA0AC7732B17B9E900938DE5 /* OneSignal */; };
 		DA6A3F922B06902F0090604C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A3F912B06902F0090604C /* AppCoordinator.swift */; };
 		DA6A3F972B06A9B40090604C /* OnSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A3F962B06A9B40090604C /* OnSettingsCoordinator.swift */; };
 		DA6A3F992B06A9CE0090604C /* OnSettingsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A3F982B06A9CE0090604C /* OnSettingsViewPresenter.swift */; };
 		DA6A3F9B2B06A9FE0090604C /* OnSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A3F9A2B06A9FE0090604C /* OnSettingsViewController.swift */; };
 		DA6A3F9E2B06AA180090604C /* OnSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6A3F9D2B06AA180090604C /* OnSettings.storyboard */; };
+		DA6F3E5E2B178EFC00C8B079 /* OnPlayGameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F3E5D2B178EFC00C8B079 /* OnPlayGameCoordinator.swift */; };
 		DABD43A32B064FB90006C7FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43A22B064FB90006C7FC /* AppDelegate.swift */; };
 		DABD43A72B064FB90006C7FC /* OnHelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD43A62B064FB90006C7FC /* OnHelloViewController.swift */; };
 		DABD43AA2B064FB90006C7FC /* OnWelcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABD43A82B064FB90006C7FC /* OnWelcome.storyboard */; };
@@ -60,6 +63,7 @@
 		DA6A3F982B06A9CE0090604C /* OnSettingsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSettingsViewPresenter.swift; sourceTree = "<group>"; };
 		DA6A3F9A2B06A9FE0090604C /* OnSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSettingsViewController.swift; sourceTree = "<group>"; };
 		DA6A3F9D2B06AA180090604C /* OnSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnSettings.storyboard; sourceTree = "<group>"; };
+		DA6F3E5D2B178EFC00C8B079 /* OnPlayGameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnPlayGameCoordinator.swift; sourceTree = "<group>"; };
 		DABD439F2B064FB90006C7FC /* SuperBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD43A22B064FB90006C7FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DABD43A62B064FB90006C7FC /* OnHelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnHelloViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0AC7712B17B5E100938DE5 /* AppsFlyerLib in Frameworks */,
+				DA0AC7742B17B9E900938DE5 /* OneSignal in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +263,6 @@
 			children = (
 				DAC9164B2B07784D00BAA8AD /* Service */,
 				DAC916482B07768D00BAA8AD /* Storyboard */,
-				DABD43DF2B06517B0006C7FC /* OnPreGame */,
 				DABD43E02B0651830006C7FC /* OnPlayGame */,
 			);
 			path = OnGame;
@@ -289,13 +294,6 @@
 				DABD43F02B0658EC0006C7FC /* Coordinator */,
 			);
 			path = OnTutorial;
-			sourceTree = "<group>";
-		};
-		DABD43DF2B06517B0006C7FC /* OnPreGame */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = OnPreGame;
 			sourceTree = "<group>";
 		};
 		DABD43E02B0651830006C7FC /* OnPlayGame */ = {
@@ -378,6 +376,7 @@
 		DAC916432B07758B00BAA8AD /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				DA6F3E5D2B178EFC00C8B079 /* OnPlayGameCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -448,6 +447,10 @@
 			dependencies = (
 			);
 			name = SuperBall;
+			packageProductDependencies = (
+				DA0AC7702B17B5E100938DE5 /* AppsFlyerLib */,
+				DA0AC7732B17B9E900938DE5 /* OneSignal */,
+			);
 			productName = SuperBall;
 			productReference = DABD439F2B064FB90006C7FC /* SuperBall.app */;
 			productType = "com.apple.product-type.application";
@@ -520,6 +523,10 @@
 				Base,
 			);
 			mainGroup = DABD43962B064FB90006C7FC;
+			packageReferences = (
+				DA0AC76F2B17B5E100938DE5 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+				DA0AC7722B17B9E900938DE5 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
+			);
 			productRefGroup = DABD43A02B064FB90006C7FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -575,6 +582,7 @@
 				DAC9164F2B07789C00BAA8AD /* OnPlayGameViewPresenter.swift in Sources */,
 				DA6A3F972B06A9B40090604C /* OnSettingsCoordinator.swift in Sources */,
 				DABD43AD2B064FB90006C7FC /* SuperBall.xcdatamodeld in Sources */,
+				DA6F3E5E2B178EFC00C8B079 /* OnPlayGameCoordinator.swift in Sources */,
 				DABD43F62B0659450006C7FC /* OnTutorialCoordinator.swift in Sources */,
 				DABD43A72B064FB90006C7FC /* OnHelloViewController.swift in Sources */,
 				DA6A3F9B2B06A9FE0090604C /* OnSettingsViewController.swift in Sources */,
@@ -925,6 +933,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA0AC76F2B17B5E100938DE5 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.12.2;
+			};
+		};
+		DA0AC7722B17B9E900938DE5 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.12.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA0AC7702B17B5E100938DE5 /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA0AC76F2B17B5E100938DE5 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+		DA0AC7732B17B9E900938DE5 /* OneSignal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA0AC7722B17B9E900938DE5 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignal;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DABD43AB2B064FB90006C7FC /* SuperBall.xcdatamodeld */ = {

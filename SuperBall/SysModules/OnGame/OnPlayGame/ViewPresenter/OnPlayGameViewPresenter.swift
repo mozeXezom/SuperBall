@@ -10,9 +10,36 @@ import WebKit
 
 final class OnPlayGameViewPresenter: NSObject {
     private let onGameService = OnGameService()
+    let animationBallImages = [UIImage(named: "ballAnim1"), UIImage(named: "ballAnim2"), UIImage(named: "ballAnim3"), UIImage(named: "ballAnim4"), UIImage(named: "ballAnim5")]
+    
+    var onMenuButtonImage: UIImage {
+        return UIImage(named: "superBallMenu")!
+    }
     
     var gameUrl: String {
-        return "https://codecanyon.net/item/super-plinko-html5-game/33662260"
+        return "https://preview.codecanyon.net/item/super-plinko-html5-game/full_screen_preview/33662260?_ga=2.129101579.688727867.1699956625-1830898887.1691924182"
+    }
+    
+    var infoUrl: String {
+        return "https://playvecc.com/Superball"
+    }
+    
+    var loadingTxt: String {
+        return "LOADING..."
+    }
+    
+    var observerTxt: String {
+        return """
+            (function() {
+                var originalLogFunction = console.log;
+                console.log = function(message) {
+                    if (message == "click") {
+                        window.webkit.messageHandlers.click.postMessage(message);
+                    }
+                    originalLogFunction.apply(console, arguments);
+                };
+            })();
+        """
     }
     
     func startOnGame(_ handler: @escaping (ContributionFinalStatus) -> Void) {
@@ -54,17 +81,7 @@ extension OnPlayGameViewPresenter: WKScriptMessageHandler, WKNavigationDelegate 
 
     private func prepareWKUCController() -> WKUserContentController {
         let userContentController = WKUserContentController()
-        let script = """
-            (function() {
-                var originalLogFunction = console.log;
-                console.log = function(message) {
-                    if (message == "click") {
-                        window.webkit.messageHandlers.click.postMessage(message);
-                    }
-                    originalLogFunction.apply(console, arguments);
-                };
-            })();
-        """
+        let script = observerTxt
         let userScript = WKUserScript(source: script, injectionTime: .atDocumentEnd, forMainFrameOnly: false)
         userContentController.addUserScript(userScript)
         userContentController.add(self, name: "click")

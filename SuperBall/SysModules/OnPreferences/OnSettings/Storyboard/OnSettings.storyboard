@@ -111,20 +111,65 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wVp-Sz-8GA">
+                                        <rect key="frame" x="20" y="195.66666666666669" width="353" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXG-P6-9QW">
+                                                <rect key="frame" x="15" y="14" width="269" height="17"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BuI-mz-v8a">
+                                                <rect key="frame" x="289" y="7" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="soundAskSwitchInsert:" destination="Y6W-OH-hqX" eventType="valueChanged" id="MZa-49-k5k"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.2588235438" green="0.2235293984" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="BuI-mz-v8a" secondAttribute="trailing" constant="15" id="5DT-Vp-G2a"/>
+                                            <constraint firstItem="aXG-P6-9QW" firstAttribute="leading" secondItem="wVp-Sz-8GA" secondAttribute="leading" constant="15" id="5OH-gJ-1cj"/>
+                                            <constraint firstItem="BuI-mz-v8a" firstAttribute="leading" secondItem="aXG-P6-9QW" secondAttribute="trailing" constant="5" id="6bR-w8-7vg"/>
+                                            <constraint firstItem="aXG-P6-9QW" firstAttribute="centerY" secondItem="wVp-Sz-8GA" secondAttribute="centerY" id="IcR-mN-toc"/>
+                                            <constraint firstAttribute="height" constant="45" id="bB7-nA-xiB"/>
+                                            <constraint firstItem="BuI-mz-v8a" firstAttribute="centerY" secondItem="wVp-Sz-8GA" secondAttribute="centerY" id="g4K-gP-8if"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S8-Ue-UtH">
+                                        <rect key="frame" x="328" y="54.666666666666657" width="35" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="dSg-r0-cGX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wVp-Sz-8GA" secondAttribute="trailing" constant="20" id="3k7-ML-KSf"/>
                                     <constraint firstItem="2aF-yb-8tA" firstAttribute="centerY" secondItem="fu4-hr-28a" secondAttribute="centerY" id="3sp-gG-ogp"/>
                                     <constraint firstAttribute="trailing" secondItem="pz5-e7-6mj" secondAttribute="trailing" constant="25" id="76s-wP-hsQ"/>
                                     <constraint firstItem="Nr5-tM-e3o" firstAttribute="leading" secondItem="g1i-vK-eBW" secondAttribute="leading" constant="30" id="7kk-De-HJx"/>
                                     <constraint firstItem="Nr5-tM-e3o" firstAttribute="top" secondItem="g1i-vK-eBW" secondAttribute="top" constant="50" id="9U5-i6-ksJ"/>
                                     <constraint firstItem="fu4-hr-28a" firstAttribute="centerY" secondItem="CBX-LE-Kes" secondAttribute="centerY" id="Hhf-Dl-zqn"/>
                                     <constraint firstItem="Zf9-AL-MaR" firstAttribute="centerY" secondItem="iSO-ma-kij" secondAttribute="centerY" id="Hss-8F-ZI6"/>
+                                    <constraint firstItem="wVp-Sz-8GA" firstAttribute="top" secondItem="PSs-I1-xed" secondAttribute="bottom" constant="15" id="Oww-6y-g2T"/>
                                     <constraint firstItem="PSs-I1-xed" firstAttribute="leading" secondItem="g1i-vK-eBW" secondAttribute="leading" constant="20" id="Q91-xJ-d1h"/>
                                     <constraint firstItem="pz5-e7-6mj" firstAttribute="centerY" secondItem="Zf9-AL-MaR" secondAttribute="centerY" id="Rxs-UJ-PBh"/>
+                                    <constraint firstItem="6S8-Ue-UtH" firstAttribute="centerY" secondItem="Nr5-tM-e3o" secondAttribute="centerY" id="WFJ-5N-Wax"/>
+                                    <constraint firstAttribute="trailing" secondItem="6S8-Ue-UtH" secondAttribute="trailing" constant="30" id="WkB-hG-Odd"/>
                                     <constraint firstItem="CBX-LE-Kes" firstAttribute="top" secondItem="SSr-m5-S32" secondAttribute="bottom" constant="15" id="ail-02-idc"/>
                                     <constraint firstAttribute="trailing" secondItem="SSr-m5-S32" secondAttribute="trailing" constant="20" id="b1H-pH-Z2I"/>
                                     <constraint firstItem="PSs-I1-xed" firstAttribute="top" secondItem="2aF-yb-8tA" secondAttribute="bottom" constant="10" id="dNz-QC-5SD"/>
+                                    <constraint firstItem="wVp-Sz-8GA" firstAttribute="leading" secondItem="g1i-vK-eBW" secondAttribute="leading" constant="20" id="eSt-cH-DE2"/>
                                     <constraint firstItem="fu4-hr-28a" firstAttribute="leading" secondItem="CBX-LE-Kes" secondAttribute="trailing" constant="5" id="fR2-X5-1AL"/>
                                     <constraint firstItem="Zf9-AL-MaR" firstAttribute="leading" secondItem="iSO-ma-kij" secondAttribute="trailing" constant="5" id="fo4-I8-HES"/>
                                     <constraint firstItem="SSr-m5-S32" firstAttribute="leading" secondItem="g1i-vK-eBW" secondAttribute="leading" constant="20" id="ihg-mp-0f2"/>
@@ -167,11 +212,15 @@
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="HiW-uB-1TC" id="aay-rx-wGA"/>
+                        <outlet property="customLabel" destination="MON-xB-Hcf" id="D0J-s7-Qht"/>
+                        <outlet property="infoSetLabel" destination="6S8-Ue-UtH" id="PVu-ud-X8T"/>
                         <outlet property="privacyButton" destination="2aF-yb-8tA" id="T1O-P8-s2N"/>
                         <outlet property="privacyImageView" destination="CBX-LE-Kes" id="sOI-vg-QdX"/>
                         <outlet property="privacyLabel" destination="fu4-hr-28a" id="Yhk-wl-eBu"/>
                         <outlet property="settingsBgImageView" destination="h5S-Ef-yNA" id="jdu-qh-OFs"/>
                         <outlet property="settingsLabel" destination="Nr5-tM-e3o" id="ZSl-g9-wqG"/>
+                        <outlet property="soundAskLabel" destination="aXG-P6-9QW" id="CZH-7A-nAc"/>
+                        <outlet property="soundAskSwitch" destination="BuI-mz-v8a" id="wga-LP-0PB"/>
                         <outlet property="soundImageView" destination="iSO-ma-kij" id="on7-jA-lXA"/>
                         <outlet property="soundLabel" destination="Zf9-AL-MaR" id="4W1-Pg-ck9"/>
                         <outlet property="soundSwitch" destination="pz5-e7-6mj" id="A9K-wB-0T4"/>

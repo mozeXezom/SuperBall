@@ -18,21 +18,25 @@ class OnSettingsViewController: UIViewController {
     @IBOutlet weak var privacyLabel: UILabel!
     @IBOutlet weak var privacyButton: UIButton!
     @IBOutlet weak var soundSwitch: UISwitch!
+    @IBOutlet weak var customLabel: UILabel!
+    
+    @IBOutlet weak var soundAskLabel: UILabel!
+    @IBOutlet weak var soundAskSwitch: UISwitch!
+    @IBOutlet weak var infoSetLabel: UILabel!
     
     private let viewPresenter: OnSettingsViewPresenter = OnSettingsViewPresenter()
     private let coordinator: OnSettingsCoordinator = OnSettingsCoordinator()
-    private let audioPlayer: AudioPlayer = AudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initiateOnSettingsViewController()
+        observeOnSettingsState()
     }
     
     private func initiateOnSettingsViewController() {
         initiateLocalization()
         initiateUI()
-        let isAudioPlaying = UserDefaults.standard.bool(forKey: "isAudioPlaying")
-        soundSwitch.isOn = isAudioPlaying
+        viewPresenter.checkForAudioPlayState(soundSwitch)
     }
     
     private func initiateUI() {
@@ -47,19 +51,13 @@ class OnSettingsViewController: UIViewController {
         settingsLabel.text = viewPresenter.settingsTxt
         soundLabel.text = viewPresenter.soundTxt
         privacyLabel.text = viewPresenter.privacyTxt
+        customLabel.text = viewPresenter.customTxt
+        soundAskLabel.text = viewPresenter.soundAskTxt
+        infoSetLabel.text = viewPresenter.infoSetTxt
     }
     
-    private func updateAudioPlayerState(_ isPlaying: Bool) {
-        soundSwitch.isOn = isPlaying
-        if isPlaying {
-            audioPlayer.pause()
-        } else {
-            audioPlayer.pause()
-        }
-        
-        // Update UserDefaults
-        UserDefaults.standard.set(isPlaying, forKey: "isAudioPlaying")
-        UserDefaults.standard.synchronize()
+    private func observeOnSettingsState() {
+        viewPresenter.checkAskForSoundState(soundAskSwitch)
     }
     
     @IBAction func closeButtonInsert(_ sender: UIButton) {
@@ -67,10 +65,18 @@ class OnSettingsViewController: UIViewController {
     }
     
     @IBAction func soundSwitchInsert(_ sender: UISwitch) {
-        updateAudioPlayerState(sender.isOn)
+        viewPresenter.defineAudioPlayState(sender)
     }
     
     @IBAction func privacyButtonInsert(_ sender: UIButton) {
         
+    }
+    
+    @IBAction func soundAskSwitchInsert(_ sender: UISwitch) {
+        if sender.isOn {
+            viewPresenter.updateSoundState(true)
+        } else {
+            viewPresenter.updateSoundState(false)
+        }
     }
 }

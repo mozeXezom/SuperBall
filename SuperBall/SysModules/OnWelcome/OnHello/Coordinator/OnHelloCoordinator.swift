@@ -8,9 +8,9 @@
 import UIKit
 
 final class OnHelloCoordinator: NSObject {
-    func makeCoordinationWithOnHelloController(selfController: UIViewController) {
-        if let onHelloController = AppCoordinator.shared.initiateViewController(fromStoryboard: .onWelcome, withIdentifier: .onTutorialController) as? OnTutorialViewController {
-            AppCoordinator.shared.routeCoordinationTo(.fromRight, selfController: selfController, controllerToPresent: onHelloController)
+    func makeCoordinationWithOnTutorialController(selfController: UIViewController) {
+        if let onTurotialoController = AppCoordinator.shared.initiateViewController(fromStoryboard: .onWelcome, withIdentifier: .onTutorialController) as? OnTutorialViewController {
+            AppCoordinator.shared.routeCoordinationTo(.fromRight, selfController: selfController, controllerToPresent: onTurotialoController)
         }
     }
 }

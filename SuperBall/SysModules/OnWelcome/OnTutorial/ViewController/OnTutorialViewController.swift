@@ -46,7 +46,7 @@ class OnTutorialViewController: UIViewController {
     }
     
     @IBAction func onShareInsert(_ sender: UIButton) {
-        
+        viewPresenter.initiateInviteFriends(self)
     }
     
     @IBAction func onSettingsInsert(_ sender: UIButton) {
@@ -54,19 +54,26 @@ class OnTutorialViewController: UIViewController {
     }
     
     @IBAction func onPlayInsert(_ sender: UIButton) {
-        oneTutButton.isHidden = false
-        onTutorialLogoImgView.isHidden = true
-        onPlayButton.isHidden = true
+        UIView.transition(with: self.view, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.oneTutButton.isHidden = false
+            self.onTutorialLogoImgView.isHidden = true
+            self.onPlayButton.isHidden = true
+        }, completion: nil)
     }
+
     
     @IBAction func oneInsert(_ sender: UIButton) {
-        oneTutButton.isHidden = true
-        twoTutButton.isHidden = false
+        UIView.transition(with: self.view, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.oneTutButton.isHidden = true
+            self.twoTutButton.isHidden = false
+        }, completion: nil)
     }
     
     @IBAction func twoInsert(_ sender: UIButton) {
-        twoTutButton.isHidden = true
-        threeTutButton.isHidden = false
+        UIView.transition(with: self.view, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.twoTutButton.isHidden = true
+            self.threeTutButton.isHidden = false
+        }, completion: nil)
     }
     
     @IBAction func threeInsert(_ sender: UIButton) {

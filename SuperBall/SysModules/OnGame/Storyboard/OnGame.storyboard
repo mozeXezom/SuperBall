@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Semibold.ttf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--On Play Game View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -19,23 +24,91 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I6v-Z6-GJL">
+                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qu-px-ZRW">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTx-wt-8eQ">
+                                                <rect key="frame" x="15" y="0.0" width="30" height="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="openMenuInsert:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XWZ-Oq-83s"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="wTx-wt-8eQ" firstAttribute="leading" secondItem="3qu-px-ZRW" secondAttribute="leading" constant="15" id="IA9-Of-1xe"/>
+                                            <constraint firstItem="wTx-wt-8eQ" firstAttribute="top" secondItem="3qu-px-ZRW" secondAttribute="top" id="OEe-Ay-yjQ"/>
+                                            <constraint firstAttribute="height" constant="60" id="gYD-ca-kLu"/>
+                                            <constraint firstAttribute="bottom" secondItem="wTx-wt-8eQ" secondAttribute="bottom" id="sgT-0o-RwW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3qu-px-ZRW" firstAttribute="leading" secondItem="I6v-Z6-GJL" secondAttribute="leading" id="AEl-FR-0Fg"/>
+                                    <constraint firstAttribute="height" constant="60" id="Sq9-sl-yCS"/>
+                                    <constraint firstItem="3qu-px-ZRW" firstAttribute="top" secondItem="I6v-Z6-GJL" secondAttribute="top" id="b2Q-UO-spD"/>
+                                    <constraint firstAttribute="trailing" secondItem="3qu-px-ZRW" secondAttribute="trailing" id="dTd-8d-c2p"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdU-sa-2ob">
+                                <rect key="frame" x="0.0" y="119" width="393" height="699"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aj2-8e-45i">
+                                        <rect key="frame" x="146.66666666666666" y="299.66666666666669" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="D7F-x9-hMC"/>
+                                            <constraint firstAttribute="width" constant="100" id="zB9-xG-Ivw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyO-Re-RBP">
+                                        <rect key="frame" x="173.66666666666666" y="276.66666666666669" width="46" height="23"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="NyO-Re-RBP" firstAttribute="centerX" secondItem="UdU-sa-2ob" secondAttribute="centerX" id="PQy-0n-do3"/>
+                                    <constraint firstItem="aj2-8e-45i" firstAttribute="top" secondItem="NyO-Re-RBP" secondAttribute="bottom" id="Qje-oe-ExP"/>
+                                    <constraint firstItem="aj2-8e-45i" firstAttribute="centerY" secondItem="UdU-sa-2ob" secondAttribute="centerY" id="ZWL-zH-TB1"/>
+                                    <constraint firstItem="aj2-8e-45i" firstAttribute="centerX" secondItem="UdU-sa-2ob" secondAttribute="centerX" id="l9B-nk-YTc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.098039209840000002" green="0.035294115539999997" blue="0.1607843041" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="UdU-sa-2ob" firstAttribute="top" secondItem="I6v-Z6-GJL" secondAttribute="bottom" id="7EY-ap-lAV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0bX-6g-Std" secondAttribute="trailing" id="7ao-9H-XO0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="UdU-sa-2ob" secondAttribute="bottom" id="LUy-58-Dsf"/>
+                            <constraint firstItem="I6v-Z6-GJL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Np5-s6-4Re"/>
+                            <constraint firstItem="UdU-sa-2ob" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="OTh-Pv-Fps"/>
                             <constraint firstItem="0bX-6g-Std" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Q34-N8-KHb"/>
                             <constraint firstItem="0bX-6g-Std" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="hLr-uV-De5"/>
+                            <constraint firstAttribute="trailing" secondItem="UdU-sa-2ob" secondAttribute="trailing" id="nRB-NX-c93"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0bX-6g-Std" secondAttribute="bottom" id="uJk-Uo-dLD"/>
+                            <constraint firstItem="I6v-Z6-GJL" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="wF7-ui-nOG"/>
+                            <constraint firstItem="I6v-Z6-GJL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="xPT-XW-okd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animatedImageView" destination="aj2-8e-45i" id="eX5-jS-YHy"/>
+                        <outlet property="entireMenuView" destination="UdU-sa-2ob" id="8dK-xo-Mva"/>
                         <outlet property="gameView" destination="0bX-6g-Std" id="Lrf-U5-hKE"/>
+                        <outlet property="loadingLabel" destination="NyO-Re-RBP" id="Beq-bZ-h3q"/>
+                        <outlet property="menuView" destination="I6v-Z6-GJL" id="56p-pS-OIp"/>
+                        <outlet property="openMenuButton" destination="wTx-wt-8eQ" id="NfY-Kg-5oR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63" y="5"/>
+            <point key="canvasLocation" x="61.832061068702288" y="4.9295774647887329"/>
         </scene>
     </scenes>
 </document>
