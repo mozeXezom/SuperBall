@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		DA0AC7712B17B5E100938DE5 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = DA0AC7702B17B5E100938DE5 /* AppsFlyerLib */; };
-		DA0AC7742B17B9E900938DE5 /* OneSignal in Frameworks */ = {isa = PBXBuildFile; productRef = DA0AC7732B17B9E900938DE5 /* OneSignal */; };
+		DA697D4A2B18A73E00A41E77 /* OnPolicyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA697D492B18A73E00A41E77 /* OnPolicyController.swift */; };
+		DA697D4E2B18A9A700A41E77 /* SuperBallPrivacy.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DA697D4D2B18A9A700A41E77 /* SuperBallPrivacy.pdf */; };
+		DA697D672B18CE7800A41E77 /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = DA697D662B18CE7800A41E77 /* OneSignalFramework */; };
+		DA697D692B18CE7800A41E77 /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = DA697D682B18CE7800A41E77 /* OneSignalInAppMessages */; };
 		DA6A3F922B06902F0090604C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A3F912B06902F0090604C /* AppCoordinator.swift */; };
 		DA6A3F972B06A9B40090604C /* OnSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A3F962B06A9B40090604C /* OnSettingsCoordinator.swift */; };
 		DA6A3F992B06A9CE0090604C /* OnSettingsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A3F982B06A9CE0090604C /* OnSettingsViewPresenter.swift */; };
@@ -57,7 +60,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DA697D5F2B18CB6800A41E77 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DA697D492B18A73E00A41E77 /* OnPolicyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnPolicyController.swift; sourceTree = "<group>"; };
+		DA697D4D2B18A9A700A41E77 /* SuperBallPrivacy.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = SuperBallPrivacy.pdf; sourceTree = "<group>"; };
+		DA697D4F2B18CB3C00A41E77 /* SuperBall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SuperBall.entitlements; sourceTree = "<group>"; };
+		DA697D562B18CB6700A41E77 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		DA697D582B18CB6700A41E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA6A3F912B06902F0090604C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DA6A3F962B06A9B40090604C /* OnSettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSettingsCoordinator.swift; sourceTree = "<group>"; };
 		DA6A3F982B06A9CE0090604C /* OnSettingsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnSettingsViewPresenter.swift; sourceTree = "<group>"; };
@@ -98,8 +119,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA697D692B18CE7800A41E77 /* OneSignalInAppMessages in Frameworks */,
+				DA697D672B18CE7800A41E77 /* OneSignalFramework in Frameworks */,
 				DA0AC7712B17B5E100938DE5 /* AppsFlyerLib in Frameworks */,
-				DA0AC7742B17B9E900938DE5 /* OneSignal in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +142,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA697D482B18A73000A41E77 /* OnPolicy */ = {
+			isa = PBXGroup;
+			children = (
+				DA697D492B18A73E00A41E77 /* OnPolicyController.swift */,
+			);
+			path = OnPolicy;
+			sourceTree = "<group>";
+		};
+		DA697D552B18CB6700A41E77 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				DA697D562B18CB6700A41E77 /* NotificationService.swift */,
+				DA697D582B18CB6700A41E77 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 		DA6A3F932B06A9990090604C /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +197,7 @@
 				DABD43A12B064FB90006C7FC /* SuperBall */,
 				DABD43BB2B064FBA0006C7FC /* SuperBallTests */,
 				DABD43C52B064FBA0006C7FC /* SuperBallUITests */,
+				DA697D552B18CB6700A41E77 /* OneSignalNotificationServiceExtension */,
 				DABD43A02B064FB90006C7FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -175,6 +215,7 @@
 		DABD43A12B064FB90006C7FC /* SuperBall */ = {
 			isa = PBXGroup;
 			children = (
+				DA697D4F2B18CB3C00A41E77 /* SuperBall.entitlements */,
 				DABD43D52B0650980006C7FC /* SysApp */,
 				DABD43D92B06512A0006C7FC /* SysModules */,
 				DABD43AB2B064FB90006C7FC /* SuperBall.xcdatamodeld */,
@@ -234,6 +275,7 @@
 				DACF141A2B0D4358005F25BB /* SysSong */,
 				DACF14112B0D3C5F005F25BB /* SysFont */,
 				DABD43AE2B064FBA0006C7FC /* Assets.xcassets */,
+				DA697D4D2B18A9A700A41E77 /* SuperBallPrivacy.pdf */,
 			);
 			path = SysAssets;
 			sourceTree = "<group>";
@@ -309,6 +351,7 @@
 		DABD43E12B06518B0006C7FC /* OnSettings */ = {
 			isa = PBXGroup;
 			children = (
+				DA697D482B18A73000A41E77 /* OnPolicy */,
 				DA6A3F9C2B06AA090090604C /* Storyboard */,
 				DA6A3F952B06A9A60090604C /* ViewController */,
 				DA6A3F942B06A9A10090604C /* ViewPresenter */,
@@ -441,6 +484,7 @@
 				DABD439B2B064FB90006C7FC /* Sources */,
 				DABD439C2B064FB90006C7FC /* Frameworks */,
 				DABD439D2B064FB90006C7FC /* Resources */,
+				DA697D5F2B18CB6800A41E77 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -449,7 +493,8 @@
 			name = SuperBall;
 			packageProductDependencies = (
 				DA0AC7702B17B5E100938DE5 /* AppsFlyerLib */,
-				DA0AC7732B17B9E900938DE5 /* OneSignal */,
+				DA697D662B18CE7800A41E77 /* OneSignalFramework */,
+				DA697D682B18CE7800A41E77 /* OneSignalInAppMessages */,
 			);
 			productName = SuperBall;
 			productReference = DABD439F2B064FB90006C7FC /* SuperBall.app */;
@@ -525,7 +570,7 @@
 			mainGroup = DABD43962B064FB90006C7FC;
 			packageReferences = (
 				DA0AC76F2B17B5E100938DE5 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
-				DA0AC7722B17B9E900938DE5 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
+				DA697D652B18CE7700A41E77 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
 			);
 			productRefGroup = DABD43A02B064FB90006C7FC /* Products */;
 			projectDirPath = "";
@@ -549,6 +594,7 @@
 				DA6A3F9E2B06AA180090604C /* OnSettings.storyboard in Resources */,
 				DACF14152B0D3C81005F25BB /* SFProDisplay-Regular.ttf in Resources */,
 				DACF141C2B0D435F005F25BB /* superballsong.mp3 in Resources */,
+				DA697D4E2B18A9A700A41E77 /* SuperBallPrivacy.pdf in Resources */,
 				DACF14162B0D3C81005F25BB /* SFProDisplay-Bold.ttf in Resources */,
 				DABD43AA2B064FB90006C7FC /* OnWelcome.storyboard in Resources */,
 				DAC9164A2B07769800BAA8AD /* OnGame.storyboard in Resources */,
@@ -584,6 +630,7 @@
 				DABD43AD2B064FB90006C7FC /* SuperBall.xcdatamodeld in Sources */,
 				DA6F3E5E2B178EFC00C8B079 /* OnPlayGameCoordinator.swift in Sources */,
 				DABD43F62B0659450006C7FC /* OnTutorialCoordinator.swift in Sources */,
+				DA697D4A2B18A73E00A41E77 /* OnPolicyController.swift in Sources */,
 				DABD43A72B064FB90006C7FC /* OnHelloViewController.swift in Sources */,
 				DA6A3F9B2B06A9FE0090604C /* OnSettingsViewController.swift in Sources */,
 				DAC9164D2B07785800BAA8AD /* OnGameService.swift in Sources */,
@@ -770,8 +817,10 @@
 		DABD43CD2B064FBA0006C7FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SuperBall/SuperBall.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -797,8 +846,10 @@
 		DABD43CE2B064FBA0006C7FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SuperBall/SuperBall.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -943,12 +994,12 @@
 				minimumVersion = 6.12.2;
 			};
 		};
-		DA0AC7722B17B9E900938DE5 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+		DA697D652B18CE7700A41E77 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.12.5;
+				minimumVersion = 5.0.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -959,10 +1010,15 @@
 			package = DA0AC76F2B17B5E100938DE5 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
 			productName = AppsFlyerLib;
 		};
-		DA0AC7732B17B9E900938DE5 /* OneSignal */ = {
+		DA697D662B18CE7800A41E77 /* OneSignalFramework */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DA0AC7722B17B9E900938DE5 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
-			productName = OneSignal;
+			package = DA697D652B18CE7700A41E77 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalFramework;
+		};
+		DA697D682B18CE7800A41E77 /* OneSignalInAppMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA697D652B18CE7700A41E77 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalInAppMessages;
 		};
 /* End XCSwiftPackageProductDependency section */
 

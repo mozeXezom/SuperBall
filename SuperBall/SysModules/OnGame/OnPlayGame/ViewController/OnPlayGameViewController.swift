@@ -2,11 +2,11 @@
 //  OnPlayGameViewController.swift
 //  SuperBall
 //
-//  Created by Yurii Derzhylo on 17.11.2023.
 //
 
 import UIKit
 import WebKit
+import AppsFlyerLib
 
 class OnPlayGameViewController: UIViewController {
     
@@ -36,7 +36,7 @@ class OnPlayGameViewController: UIViewController {
     
     private func setTimerOn() {
         openMenuButton.isHidden = true
-        onPlayGameTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(performCustomAnimation), userInfo: nil, repeats: true)
+        onPlayGameTimer = Timer.scheduledTimer(timeInterval: 0.8, target: self, selector: #selector(performCustomAnimation), userInfo: nil, repeats: true)
         
         RunLoop.current.add(onPlayGameTimer!, forMode: .common)
     }
@@ -50,11 +50,11 @@ class OnPlayGameViewController: UIViewController {
         viewPresenter.startOnGame { result in
             switch result {
             case .classic:
-                self.viewPresenter.prepareWebView(with: self.gameView)
+                self.viewPresenter.performDefaultWebView(self.gameView)
             case .error:
                 print("error")
             case .url(_):
-                self.viewPresenter.prepareWebView(with: self.gameView)
+                self.viewPresenter.performCustomWebView(with: self.view)
             }
         }
     }

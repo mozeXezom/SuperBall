@@ -2,7 +2,6 @@
 //  AppCoordinator.swift
 //  SuperBall
 //
-//  Created by Yurii Derzhylo on 16.11.2023.
 //
 
 import UIKit
@@ -18,6 +17,7 @@ enum ViewControllerInitIdentifier: String {
     case onTutorialController = "onTutorialController"
     case onSettingsController = "onSettingsController"
     case onPlayGameViewController = "onPlayGameViewController"
+    case onPolicyController = "onPolicyController"
 }
 
 enum Direction {

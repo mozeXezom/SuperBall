@@ -2,7 +2,6 @@
 //  OnSettingsViewController.swift
 //  SuperBall
 //
-//  Created by Yurii Derzhylo on 16.11.2023.
 //
 
 import UIKit
@@ -24,6 +23,14 @@ class OnSettingsViewController: UIViewController {
     @IBOutlet weak var soundAskSwitch: UISwitch!
     @IBOutlet weak var infoSetLabel: UILabel!
     
+    @IBOutlet weak var rateUsLabel: UILabel!
+    @IBOutlet weak var rateUsButton: UIButton!
+    @IBOutlet weak var rateUsImageView: UIImageView!
+    
+    @IBOutlet weak var moreAppsLabel: UILabel!
+    @IBOutlet weak var moreAppsButton: UIButton!
+    @IBOutlet weak var moreAppsImageView: UIImageView!
+    
     private let viewPresenter: OnSettingsViewPresenter = OnSettingsViewPresenter()
     private let coordinator: OnSettingsCoordinator = OnSettingsCoordinator()
     
@@ -41,10 +48,14 @@ class OnSettingsViewController: UIViewController {
     
     private func initiateUI() {
         settingsBgImageView.image = viewPresenter.onSettingsBackgroundImage
-        closeButton.setImage(viewPresenter.closeSettingsImage, for: .normal)
         soundImageView.image = viewPresenter.soundSettingsImage
         privacyImageView.image = viewPresenter.privacySettingsImage
+        rateUsImageView.image = viewPresenter.onRateImage
+        moreAppsImageView.image = viewPresenter.onMoreAppsImage
+        closeButton.setImage(viewPresenter.closeSettingsImage, for: .normal)
         privacyButton.setImage(viewPresenter.settingsArrowImage, for: .normal)
+        rateUsButton.setImage(viewPresenter.settingsArrowImage, for: .normal)
+        moreAppsButton.setImage(viewPresenter.settingsArrowImage, for: .normal)
     }
     
     private func initiateLocalization() {
@@ -54,10 +65,20 @@ class OnSettingsViewController: UIViewController {
         customLabel.text = viewPresenter.customTxt
         soundAskLabel.text = viewPresenter.soundAskTxt
         infoSetLabel.text = viewPresenter.infoSetTxt
+        rateUsLabel.text = viewPresenter.rateUsTxt
+        moreAppsLabel.text = viewPresenter.otherTxt
     }
     
     private func observeOnSettingsState() {
         viewPresenter.checkAskForSoundState(soundAskSwitch)
+    }
+    
+    @IBAction func rateUsInsert(_ sender: UIButton) {
+        viewPresenter.openRateUsPage(viewPresenter.rateUsUrl)
+    }
+    
+    @IBAction func moreAppsInsert(_ sender: UIButton) {
+        viewPresenter.openRateUsPage(viewPresenter.moreAppsUrl)
     }
     
     @IBAction func closeButtonInsert(_ sender: UIButton) {
@@ -69,7 +90,7 @@ class OnSettingsViewController: UIViewController {
     }
     
     @IBAction func privacyButtonInsert(_ sender: UIButton) {
-        
+        coordinator.makeCoordinationWithOnPolicyController(selfController: self)
     }
     
     @IBAction func soundAskSwitchInsert(_ sender: UISwitch) {

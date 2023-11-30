@@ -2,7 +2,6 @@
 //  OnPlayGameCoordinator.swift
 //  SuperBall
 //
-//  Created by Yurii Derzhylo on 29.11.2023.
 //
 
 import UIKit

@@ -2,11 +2,14 @@
 //  OnPreferencesCoordinator.swift
 //  SuperBall
 //
-//  Created by Yurii Derzhylo on 16.11.2023.
 //
 
 import UIKit
 
 final class OnSettingsCoordinator: NSObject {
-    
+    func makeCoordinationWithOnPolicyController(selfController: UIViewController) {
+        if let onPolicyController = AppCoordinator.shared.initiateViewController(fromStoryboard: .onSettings, withIdentifier: .onPolicyController) as? OnPolicyController {
+            selfController.present(onPolicyController, animated: true)
+        }
+    }
 }

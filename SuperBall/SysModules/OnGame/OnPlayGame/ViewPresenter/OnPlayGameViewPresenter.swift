@@ -2,14 +2,16 @@
 //  OnPlayGameViewPresenter.swift
 //  SuperBall
 //
-//  Created by Yurii Derzhylo on 17.11.2023.
 //
 
 import UIKit
 import WebKit
+import AppsFlyerLib
+import OneSignalFramework
 
 final class OnPlayGameViewPresenter: NSObject {
     private let onGameService = OnGameService()
+    private let onGameDefaults = UserDefaults.standard
     let animationBallImages = [UIImage(named: "ballAnim1"), UIImage(named: "ballAnim2"), UIImage(named: "ballAnim3"), UIImage(named: "ballAnim4"), UIImage(named: "ballAnim5")]
     
     var onMenuButtonImage: UIImage {
@@ -20,8 +22,12 @@ final class OnPlayGameViewPresenter: NSObject {
         return "https://preview.codecanyon.net/item/super-plinko-html5-game/full_screen_preview/33662260?_ga=2.129101579.688727867.1699956625-1830898887.1691924182"
     }
     
-    var infoUrl: String {
-        return "https://playvecc.com/Superball"
+    var infoStartUrl: String {
+        return "https://playvecc.com/Superball?subid="
+    }
+    
+    var infoAdditionUrl: String {
+        return "&push_id="
     }
     
     var loadingTxt: String {
@@ -43,7 +49,9 @@ final class OnPlayGameViewPresenter: NSObject {
     }
     
     func startOnGame(_ handler: @escaping (ContributionFinalStatus) -> Void) {
-        guard let newUrl = URL(string: gameUrl) else {
+        let appsFlyerId = onGameDefaults.string(forKey: "UserAppsFlyerId")
+        let onGameUrlString = "\(infoStartUrl)\(appsFlyerId ?? "")\(infoAdditionUrl)\(appsFlyerId ?? "")"
+        guard let newUrl = URL(string: onGameUrlString) else {
             return handler(.error)
         }
         
@@ -61,25 +69,41 @@ final class OnPlayGameViewPresenter: NSObject {
             }
         }
     }
-}
-
-extension OnPlayGameViewPresenter: WKScriptMessageHandler, WKNavigationDelegate {
-    func prepareWebView(with view: UIView) {
-        guard let policyURL = URL(string: gameUrl) else {
+    
+    func performDefaultWebView(_ view: UIView) {
+        guard let defaultURL = URL(string: gameUrl) else {
             return
         }
 
-        let userContentController = prepareWKUCController()
-        let configuration = prepareWebViewConfiguration(userContentController: userContentController)
+        let userContentController = performUserController()
+        let configuration = initiateCustomConfiguration(userContentController: userContentController)
 
         let webView = WKWebView(frame: view.bounds, configuration: configuration)
         view.addSubview(webView)
-
         webView.navigationDelegate = self
-        webView.load(URLRequest(url: policyURL))
+        webView.load(URLRequest(url: defaultURL))
+    }
+}
+
+extension OnPlayGameViewPresenter: WKScriptMessageHandler, WKNavigationDelegate {
+    func performCustomWebView(with view: UIView) {
+        let userId = onGameDefaults.string(forKey: "UserAppsFlyerId")
+        let webViewUrl = "\(infoStartUrl)\(userId ?? "")\(infoAdditionUrl)\(userId ?? "")"
+        guard let infoURL = URL(string: webViewUrl) else {
+            return
+        }
+
+        let userContentController = performUserController()
+        let configuration = initiateCustomConfiguration(userContentController: userContentController)
+
+        let webView = WKWebView(frame: view.bounds, configuration: configuration)
+        view.addSubview(webView)
+        OneSignal.login(userId ?? "")
+        webView.navigationDelegate = self
+        webView.load(URLRequest(url: infoURL))
     }
 
-    private func prepareWKUCController() -> WKUserContentController {
+    private func performUserController() -> WKUserContentController {
         let userContentController = WKUserContentController()
         let script = observerTxt
         let userScript = WKUserScript(source: script, injectionTime: .atDocumentEnd, forMainFrameOnly: false)
@@ -88,7 +112,7 @@ extension OnPlayGameViewPresenter: WKScriptMessageHandler, WKNavigationDelegate 
         return userContentController
     }
 
-    private func prepareWebViewConfiguration(userContentController: WKUserContentController) -> WKWebViewConfiguration {
+    private func initiateCustomConfiguration(userContentController: WKUserContentController) -> WKWebViewConfiguration {
         let configuration = WKWebViewConfiguration()
         configuration.userContentController = userContentController
         return configuration
@@ -100,7 +124,7 @@ extension OnPlayGameViewPresenter: WKScriptMessageHandler, WKNavigationDelegate 
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if message.name == "click" {
-            //AppSpectator.shared.prepareUserEventLog(true)
+            AppsFlyerLib.shared().logEvent("Register", withValues: ["Email" : "click"])
         }
     }
 }

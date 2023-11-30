@@ -2,12 +2,14 @@
 //  OnTurorialViewPresenter.swift
 //  SuperBall
 //
-//  Created by Yurii Derzhylo on 16.11.2023.
 //
 
 import UIKit
+import AppsFlyerLib
 
 final class OnTurorialViewPresenter: NSObject {
+    private let onTutorialDefaults = UserDefaults.standard
+    
     var onTutorialBackgroundImage: UIImage {
         return UIImage(named: "superBallBackground")!
     }
@@ -52,6 +54,16 @@ final class OnTurorialViewPresenter: NSObject {
         if let inviteFriendsUrl = URL(string: inviteFriendsUrl) {
             let inviteController = UIActivityViewController(activityItems: [inviteFriendsMessage, inviteFriendsUrl], applicationActivities: nil)
             initController.present(inviteController, animated: true, completion: nil)
+        }
+    }
+    
+    func getUserAppsFlyerId() {
+        if AppsFlyerLib.shared().getAppsFlyerUID() != nil {
+            let appsFlyerId = AppsFlyerLib.shared().getAppsFlyerUID()
+            onTutorialDefaults.setValue(appsFlyerId, forKey: "UserAppsFlyerId")
+            print("AppsFlyer ID: \(appsFlyerId)")
+        } else {
+            print("Unable to retrieve AppsFlyer ID")
         }
     }
 }

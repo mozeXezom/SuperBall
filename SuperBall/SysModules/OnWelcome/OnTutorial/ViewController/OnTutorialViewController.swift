@@ -2,7 +2,6 @@
 //  OnTutorialViewController.swift
 //  SuperBall
 //
-//  Created by Yurii Derzhylo on 16.11.2023.
 //
 
 import UIKit
@@ -25,6 +24,7 @@ class OnTutorialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initiateOnTutorialViewControllerUI()
+        viewPresenter.getUserAppsFlyerId()
     }
     
     private func initiateOnTutorialViewControllerUI() {

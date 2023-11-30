@@ -2,7 +2,6 @@
 //  AppAudioPlayer.swift
 //  SuperBall
 //
-//  Created by Yurii Derzhylo on 21.11.2023.
 //
 
 import AVFoundation

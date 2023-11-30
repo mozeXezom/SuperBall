@@ -2,7 +2,6 @@
 //  SuperBallUITests.swift
 //  SuperBallUITests
 //
-//  Created by Yurii Derzhylo on 16.11.2023.
 //
 
 import XCTest

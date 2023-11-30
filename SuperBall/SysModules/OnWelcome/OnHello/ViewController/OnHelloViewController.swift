@@ -2,7 +2,6 @@
 //  ViewController.swift
 //  SuperBall
 //
-//  Created by Yurii Derzhylo on 16.11.2023.
 //
 
 import UIKit
@@ -23,8 +22,6 @@ class OnHelloViewController: UIViewController {
     private func initiateOnHelloViewController() {
         onHelloBgImgView.image = viewPresenter.onHelloBackgroundImage
         onHelloLogoImgView.image = viewPresenter.onHelloLogoImage
-        UserDefaults.standard.set(true, forKey: "hasSongBeenPlayed")
-        UserDefaults.standard.synchronize()
     }
     
     override func viewDidAppear(_ animated: Bool) {

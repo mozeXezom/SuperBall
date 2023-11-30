@@ -2,10 +2,10 @@
 //  OnPreferencesViewPresenter.swift
 //  SuperBall
 //
-//  Created by Yurii Derzhylo on 16.11.2023.
 //
 
 import UIKit
+import SafariServices
 
 final class OnSettingsViewPresenter: NSObject {
     private let onSettingsDefaults = UserDefaults.standard
@@ -30,6 +30,14 @@ final class OnSettingsViewPresenter: NSObject {
         return UIImage(named: "privacyImage")!
     }
     
+    var onRateImage: UIImage {
+        return UIImage(named: "rateSuperball")!
+    }
+    
+    var onMoreAppsImage: UIImage {
+        return UIImage(named: "moreAppsBall")!
+    }
+    
     var settingsTxt: String {
         return "Settings"
     }
@@ -51,11 +59,33 @@ final class OnSettingsViewPresenter: NSObject {
     }
     
     var infoSetTxt: String {
-        return "Jelly Jumper"
+        return "SuperBall"
+    }
+    
+    var rateUsTxt: String {
+        return "Rate our app"
+    }
+    
+    var otherTxt: String {
+        return "Check our other apps"
+    }
+    
+    var rateUsUrl: String {
+        return "https://apps.apple.com/us/app/superball-gia/id6463219684?ppid=bfb42125-2822-41c9-a970-e01fe7c14172"
+    }
+    
+    var moreAppsUrl: String {
+        return "https://apps.apple.com/ua/app/superball-gia/id6463219684"
     }
     
     func updateSoundState(_ state: Bool) {
         onSettingsDefaults.set(state, forKey: "switchOn")
+    }
+    
+    func openRateUsPage(_ urlString: String) {
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url)
+        }
     }
     
     func defineAudioPlayState(_ audioSwitcher: UISwitch) {
